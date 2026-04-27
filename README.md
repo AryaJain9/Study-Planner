@@ -38,3 +38,9 @@ A modern and responsive **Study Planner** web application to help students organ
 1. Download or clone the repository:
    ```bash
    git clone https://github.com/AryaJain/study-planner.git
+
+## 📜 License
+
+This project is protected under a custom license.
+
+See the [LICENSE](LICENSE) file for full details.
