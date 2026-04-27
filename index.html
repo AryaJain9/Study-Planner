@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="aurora"></div>
+
+  <main class="app">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="mini-title">Study Planner</p>
+        <h1>Turn your study goals into daily wins.</h1>
+        <p class="hero-desc">
+          Add tasks, set deadlines, track progress, and stay focused with a beautiful planner.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <p>Today</p>
+        <h3 id="todayDate"></h3>
+        <div class="progress">
+          <span><span id="progressPercent">0</span>% complete</span>
+          <div class="progress-line">
+            <div id="progressFill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat purple">
+        <span>Total Tasks</span>
+        <strong id="totalTasks">0</strong>
+      </div>
+      <div class="stat green">
+        <span>Completed</span>
+        <strong id="completedTasks">0</strong>
+      </div>
+      <div class="stat orange">
+        <span>Pending</span>
+        <strong id="pendingTasks">0</strong>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel add-panel">
+        <div class="panel-title">
+          <h2>Add New Task</h2>
+          <p>Create your next study target.</p>
+        </div>
+
+        <form id="taskForm">
+          <input type="hidden" id="editId" />
+
+          <input type="text" id="taskTitle" placeholder="Task name" required />
+          <input type="text" id="subject" placeholder="Subject" required />
+
+          <select id="priority" required>
+            <option value="">Select priority</option>
+            <option value="High">High Priority</option>
+            <option value="Medium">Medium Priority</option>
+            <option value="Low">Low Priority</option>
+          </select>
+
+          <input type="date" id="deadline" required />
+
+          <button type="submit" id="submitBtn">Add Task</button>
+        </form>
+      </div>
+
+      <div class="panel tasks-panel">
+        <div class="task-header">
+          <div>
+            <h2>Study Board</h2>
+            <p>Manage and complete your goals.</p>
+          </div>
+
+          <button id="clearAllBtn" class="clear-btn">Clear All</button>
+        </div>
+
+        <div class="filters">
+          <input type="text" id="searchTask" placeholder="Search tasks..." />
+
+          <select id="filterTasks">
+            <option value="All">All Tasks</option>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+            <option value="High">High Priority</option>
+            <option value="Medium">Medium Priority</option>
+            <option value="Low">Low Priority</option>
+          </select>
+        </div>
+
+        <div id="taskList"></div>
+
+        <div id="emptyMessage" class="empty">
+          <h3>✨ No tasks yet</h3>
+          <p>Add your first task and start planning.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
