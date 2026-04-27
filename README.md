@@ -21,7 +21,7 @@ A modern and responsive **Study Planner** web application to help students organ
 
 > Add screenshots here after uploading your project to GitHub  
 > Example:
-> ![App Screenshot](screenshot.png)
+> ![App Screenshot](Screenshot.png)
 
 ---
 
